@@ -2,7 +2,9 @@
 
 namespace NiftyCo\Support;
 
+use Carbon\CarbonImmutable;
 use Illuminate\Support;
+use Illuminate\Support\Facades\Date;
 
 class ServiceProvider extends Support\ServiceProvider
 {
@@ -19,6 +21,7 @@ class ServiceProvider extends Support\ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Use CarbonImmutable by default
+        Date::use(CarbonImmutable::class);
     }
 }
