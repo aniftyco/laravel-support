@@ -20,6 +20,6 @@ class ServiceProvider extends Support\ServiceProvider
      */
     public function boot(): void
     {
-        Route::get('/', fn() => 'hello world');
+        Route::get('/', fn () => 'hello world');
     }
 }

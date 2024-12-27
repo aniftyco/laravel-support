@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use Orchestra\Testbench;
 use NiftyCo\Support\ServiceProvider;
+use Orchestra\Testbench;
 
 abstract class TestCase extends Testbench\TestCase
 {
