@@ -3,6 +3,7 @@
 namespace NiftyCo\Support;
 
 use Carbon\CarbonImmutable;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\URL;
@@ -32,5 +33,8 @@ class ServiceProvider extends Support\ServiceProvider
 
         // Force https
         URL::forceScheme('https');
+
+        // Don't wrap resources
+        JsonResource::withoutWrapping();
     }
 }
