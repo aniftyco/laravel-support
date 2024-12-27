@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use TailwindMerge\Contracts\TailwindMergeContract;
 
 if (! function_exists('relative_path')) {
@@ -39,4 +40,12 @@ if (! function_exists('clsx')) {
             )
         );
     }
+}
+
+/**
+ * Returns the current user authenticated, or `null`.
+ */
+function user(?string $guard = null): ?Authenticatable
+{
+    return auth()->guard($guard)->user();
 }
