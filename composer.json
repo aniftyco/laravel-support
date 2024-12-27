@@ -19,7 +19,6 @@
   ],
   "require": {
     "php": "^8.1",
-    "aaronfrancis/solo": "^0.2.2",
     "gehrisandro/tailwind-merge-php": "^1.1"
   },
   "autoload": {
