@@ -3,6 +3,7 @@
 namespace NiftyCo\Support;
 
 use Carbon\CarbonImmutable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support;
 use Illuminate\Support\Facades\Date;
@@ -36,5 +37,8 @@ class ServiceProvider extends Support\ServiceProvider
 
         // Don't wrap resources
         JsonResource::withoutWrapping();
+
+        // Automatically eager load relationships
+        Model::automaticallyEagerLoadRelationships();
     }
 }
